@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SHOP</title>
+<style>
+body {background-color : white;}
+.navbar {
+display: flex;
+ flex-direction: row;
+ justify-content:space-between;
+ align-items: stretch;
+ overflow: hidden;
+ background-color: rgba(255,0,0,1);
+ position: fixed;
+ top: 0;
+ width: 100%;
+ height:auto;
+}
+.ab h1{
+ color:white;
+ padding: 20px 20px;
+ text-align:center;
+ text-decoration: none;
+ font-size: 17px;
+ height:10px;
+}
+
+.ab:hover {
+ background:rgba(125,0,0,1);
+ color: white;
+}
+
+.main {
+ padding: 16px;
+ margin-top: 30px;
+ height: 1500px;
+ color:black;
+ text-align: center;
+}
+img {
+ display: block;
+ margin: 10px;
+ border: 1px solid red;
+ padding: .5rem;
+ border-radius: 1rem;
+ box-shadow: 3px 3px 8px 0px rgba(0,0,0,0.3);
+ max-width: 20vw;
+ }
+.button {
+ background-color: rgba(255,0,0,1); 
+ border: none;
+ color: white;
+ padding: 15px 32px;
+ text-align: center;
+ text-decoration: none;
+ display: inline-block;
+ font-size: 12px;
+ border-radius: 16px;
+ transition-duration: 0.4s;
+ cursor: pointer;
+ box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.button:hover {
+ background-color: rgba(132,0,0,1);
+ color: white;
+}
+.styled-table {
+ border-collapse: collapse;
+ box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+ width: 60%;
+ height 120px;
+ border-spacing: 20px;
+ margin-top:12%;
+}
+.styled-table img{
+ width: 15vw;
+ height: 10vw;
+}
+td{
+ padding: 10px 2px 2px 5px ;
+}
+}
+td[colspan="3"] {
+ text-align: center;
+}
+.transparent {
+    margin-top: 12%;
+
+    background-color: white;
+    background-size: cover;   
+}
+.ta{
+resize:none;
+width:30%;
+height:auto; 
+}
+
+.tv{
+direction:row;
+width:100%;
+height:auto;
+margin-top:12%;
+margin-left:12%;
+}
+
+.info{
+display:block;
+}
+
+</style>
+<script>
+function op(list){
+  document.getElementById(list).style.display = "block";
+  window.scrollTo(0, 0);
+};
+function cl(list){
+  document.getElementById(list).style.display = "none";
+};
+function bu(a,b,c,d,e){
+  op(a);
+  cl(b);
+  cl(c);
+  cl(d);
+  cl(e);
+};
+function op1(list){
+  document.getElementById(list).style.display = "flex";
+  window.scrollTo(0, 0);
+};
+function cons(a,b,c,d,e){
+ op1(a);
+  cl(b);
+  cl(c);
+  cl(d);
+  cl(e);
+}
+function sendMail()
+{
+    var body = document.getElementById("username").value;
+    window.location.href = "mailto:danilrokin7@gmail.com?subject=otzyv="+body;
+}
+</script>
+</head>
+<body>
+<div class="navbar">
+ <div class="ab" onclick="bu('tab','tab2','tab3','otz','tov1')" >
+  <h1>КОНСОЛИ</h1>
+ </div>
+ <div class="ab" onclick="bu('tab2','tab','tab3','otz','tov1')">
+ <h1>ИГРЫ</h1>
+ </div>
+ <div class="ab" onclick="bu('tab3','tab','tab2','otz','tov1')">
+ <h1>АКССЕСУАРЫ</h1>
+ </div>
+ <div class="ab" onclick="bu('otz','tab','tab2','tab3','tov1')">
+ <h1>ОСТАВИТЬ ОТЗЫВ</h1>
+ </div>
+</div>
+<div id='tab'>
+ <table class="styled-table" align="center">
+ <tr>
+  <td ><img src="11.jpg" onclick=cons('tov1','otz','tab','tab2','tab3') /></td>
+  <td ><img src="12.jpg" /></td>
+  <td ><img src="13.jpg" /></td>
+ </tr>
+ <tr>
+  <td ><img src="14.jpg" /></td>
+  <td ><img src="15.jpg" /></td>
+  <td ><img src="16.jpg"/></td>
+ </tr>
+ <tr>
+  <td ><img src="17.jpg" /></td>
+  <td ><img src="18.jpg" /></td>
+  <td ><img src="19.jpg" /></td>
+ </tr>
+ </table>
+</div>
+
+<div style="display: none" id='tab2'>
+ <table class="styled-table" align="center">
+ <tr>
+  <td ><img src="1.jpg" /></td>
+  <td ><img src="2.jpg" /></td>
+  <td ><img src="3.jpg" /></td>
+ </tr>
+ <tr>
+  <td ><img src="4.jpg" /></td>
+  <td ><img src="5.jpg" /></td>
+  <td ><img src="6.jpg"/></td>
+ </tr>
+ <tr>
+  <td ><img src="7.jpg" /></td>
+  <td ><img src="8.jpg" /></td>
+  <td ><img src="9.jpg" /></td>
+ </tr>
+ </table>
+</div>
+
+<div style="display: none" id='tab3'>
+ <table class="styled-table" align="center">
+ <tr>
+  <td ><img src="21.jpg" /></td>
+  <td ><img src="22.jpg" /></td>
+  <td ><img src="23.jpg" /></td>
+ </tr>
+ <tr>
+  <td ><img src="24.jpg" /></td>
+  <td ><img src="25.jpg" /></td>
+  <td ><img src="26.jpg"/></td>
+ </tr>
+ </table>
+</div>
+
+ <div class="tv" id='tov1' style="display: none">
+  <img src="11.jpg" />
+  <div class = "info" >
+  <h1>Gameboy</h1>
+  <p> 8-битная портативная игровая система, разработанная и произведённая компанией Nintendo. </p>
+  <p>Первая портативная система семейства Game Boy была впервые выпущена в Японии 21 апреля 1989 года.</p>
+  <p> В конце того же года система была выпущена в Северной Америке, а в конце 1990 года — в Европе.</p>
+  <p style="color: red">ЦЕНА:</p><p>ХХХХ руб.</p>
+  <button class="button" >Купить</button>
+  </div>
+ </div>
+ 
+
+<div class="transparent" style="display: none" id='otz' align="center">
+  <label for="username">Ваша электронная почта</label>
+  <br><input type="text" id="username"></br>
+  <label for="otzyv">Ваш отзыв</label>
+  <br><textarea class="ta" rows="10" cols="100" id="otzyv" type="text"></textarea></br>
+  <button class="button" type="button" onclick="sendMail()"> Оправить </button>
+</div>
+</body>
+</html>
+
+
+
